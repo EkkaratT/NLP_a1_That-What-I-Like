@@ -1,6 +1,10 @@
 # NLP_a1_That What I Like
 Assignment a1_That What I Like
 
+## Project Overview
+
+This project implements and analyzes various **Word Embedding models** (Word2Vec and GloVe) for Natural Language Processing (NLP) tasks, such as word similarity and word analogies. A web application is developed to search for the top 10 most similar contexts using a trained Skipgram model.
+
 ### Preparation and Training
 
  - Modified the **Word2Vec** implementation (with and without negative sampling) and **GloVe** from the lab lecture.
@@ -33,7 +37,13 @@ Assignment a1_That What I Like
 | GloVe                     | 2           | 22.81         | 22 sec        | 0                  | 0                 |
 | GloVe (Gensim Pre-trained)| N/A         | -             | -             | 0.55               | 0.53              |
 
-#### Table: Similarity Correlation
+- **Training Loss**: The loss function value used during training. Lower values indicate better performance.
+- **Training Time**: The time it took to train the model on the dataset.
+- **Syntactic Accuracy**: Accuracy on tasks involving syntactic relationships (e.g., past-tense analogies).
+- **Semantic Accuracy**: Accuracy on tasks involving semantic relationships (e.g., capital-common-countries analogies).
+
+
+#### Table: Similarity Correlation (MSE - Mean Squared Error)
 | Model                     | Skipgram    | Skipgram (NEG) | GloVe        | GloVe (Gensim)     |
 |---------------------------|-------------|----------------|--------------|--------------------|
 | MSE                       | -0.07       | 0.04           | 0.13         | 0.53               |
@@ -43,7 +53,13 @@ Assignment a1_That What I Like
 
 The application allows users to input search queries and retrieves the top 10 most similar contexts from a trained Skipgram model.
 
-**Features**
-- Search Input Box: Users can enter a search query into an input field.
-- Similarity Search: Based on the input query, the application calculates the dot product between the query and the context embeddings from the Skipgram model.
-- Top 10 Similar Contexts: The application retrieves and displays the top 10 most similar contexts based on the trained word embeddings.
+#### Features
+- **Search Input Box**: Users can enter a search query into an input field.
+- **Similarity Search**: The application calculates the **dot product** between the input query and the context embeddings from the trained Skipgram model.
+- **Top 10 Similar Contexts**: Displays the 10 most similar words or contexts based on their similarity to the query.
+
+#### How It Works
+1. **User Input**: The user enters a query (word) into the search box on the web page.
+2. **Embedding Calculation**: The application retrieves the embedding for the query from the Skipgram model.
+3. **Dot Product Calculation**: It calculates the dot product between the query vector and the context vectors to measure similarity.
+4. **Top 10 Results**: The top 10 most similar words/contexts are displayed on the webpage.
