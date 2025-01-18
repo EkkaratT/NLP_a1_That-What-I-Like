@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 18px; /* Increase base font size */
+}
+
+/* Center the search form on the first page */
+.container {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Increase font size for headings */
+h1 {
+    font-size: 36px; /* Increase the font size of headings */
+    color: #333;
+}
+
+/* Search form styling */
+input[type="text"] {
+    padding: 12px;
+    font-size: 22px; /* Increase font size */
+    width: 80%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 12px 25px;
+    font-size: 22px; /* Increase font size */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Second page styles - Result container */
+.results-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Title for the results page */
+.results-container h1 {
+    font-size: 40px; /* Increase the font size of the results page title */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* List of results styling */
+.results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    background-color: #e7e7e7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 20px; /* Increase font size for results */
+}
+
+/* Back to search button styling */
+.back-to-search {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 22px; /* Increase font size */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back-to-search:hover {
+    background-color: #e53935;
+}
